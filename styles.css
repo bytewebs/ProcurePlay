@@ -1,0 +1,87 @@
+/* Styles for the game */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Set background color */
+    animation: colorChange 20s infinite; /* Apply background color animation */
+}
+
+/* Animation for background color change */
+@keyframes colorChange {
+    0% {
+        background-color: #f0f0f0; /* Start color */
+    }
+    50% {
+        background-color: #cfd9ff; /* Mid color */
+    }
+    100% {
+        background-color: #f0f0f0; /* End color */
+    }
+}
+
+/* Game container styles */
+.game-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: animateFadeIn 1s forwards; /* Fade-in animation */
+}
+
+/* Animation for fading in */
+@keyframes animateFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Left and right panel styles */
+.left-panel,
+.right-panel {
+    flex: 1;
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Heading styles */
+.left-panel h2,
+.right-panel h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* List styles */
+.left-panel ul,
+.right-panel ol {
+    margin-top: 0;
+    padding-left: 20px;
+    color: #555;
+}
+
+/* Game content styles */
+.game-content {
+    flex: 2;
+    padding: 10px;
+}
+
+/* Rules and how-to-play section styles */
+.rules,
+.how-to-play {
+    margin-top: 20px;
+    color: #777;
+}
+
+/* Chart container styles */
+.chart-container canvas {
+    width: 100%;
+    height: auto;
+}

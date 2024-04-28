@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Game</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- Add Animate.css -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="game-container animate__animated animate__fadeIn"> <!-- Add Animate.css classes -->
+  <div class="left-panel animate__animated animate__bounceInLeft"> <!-- Add Animate.css classes -->
+    <h2>Rules:</h2>
+    <ul>
+      <li>You start with a bank balance of $1000.</li>
+      <li>You have 10 seconds to fulfill each order.</li>
+      <li>Ordering from China costs $5 per unit.</li>
+      <li>Ordering from Mexico costs $8 per unit.</li>
+      <li>Your goal is to maximize profit by managing inventory efficiently.</li>
+    </ul>
+  </div>
+  <div class="right-panel animate__animated animate__bounceInRight"> <!-- Add Animate.css classes -->
+    <h2>How to Play:</h2>
+    <ol>
+      <li>Monitor the demand displayed on the screen.</li>
+      <li>Decide whether to order from China or Mexico based on cost and demand.</li>
+      <li>Enter the quantity you wish to order and click the corresponding order button.</li>
+      <li>Watch your bank balance and stock level to make informed decisions.</li>
+      <li>Try to balance inventory costs with potential profits to succeed!</li>
+    </ol>
+  </div>
+  <div class="game-content">
+    <div class="demand">Demand: <span id="demand"></span></div>
+    <div class="stock">Stock: <span id="stock">500</span></div> <!-- Fixed stock display -->
+    <div class="options">
+      <div class="order-option">
+        <button id="order-china" value="4" class="btn btn-primary">Order from China</button>
+        <input type="number" id="china-quantity" value="10" min="1">
+      </div>
+      <div class="order-option">
+        <button id="order-mexico" value="1" class="btn btn-primary">Order from Mexico</button>
+        <input type="number" id="mexico-quantity" value="10" min="1">
+      </div>
+    </div>
+    <div class="timer"> <span id="countdown">20</span> seconds</div>
+    <div class="message" id="message"></div> <!-- Added message display -->
+    <div class="chart-container">
+      <canvas id="balance-chart"></canvas>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
